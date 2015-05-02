@@ -7,9 +7,8 @@ class Teacher(models.Model):
     name = models.CharField(max_length=30)
     patronymic = models.CharField(max_length=30)
     gender = models.CharField(max_length=7)
-    birth_date = models.DateField
+    birth_date = models.DateField()
     phone_number = models.CharField(max_length=20)
-    photo = models.ImageField()
     address = models.TextField()
 
 

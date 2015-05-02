@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'example'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'example.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'School',
-        'USER': 'user',
-        'PASSWORD': 'password',
-        'HOST': 'host',
+        'NAME': 'jypsutpm',
+        'USER': 'jypsutpm',
+        'PASSWORD': 'Z0pA01RkMYsL_Y8yLBNAIjg6yL2uCoTB',
+        'HOST': 'horton.elephantsql.com',
         'PORT': '5432'
     }
 }
