@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center;">Лабораторная работа №2</h1>
+        <h2>Учителя</h2>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Фамилия</th>
+                  <th>Имя</th>
+                  <th>Отчество</th>
+                  <th>Пол</th>
+                  <th>Дата рождения</th>
+                  <th>Телефон</th>
+                  <th>Адрес</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for teacher in teacher_list %}
+                        <tr>
+                            <th scope="row">{{teacher.id}}</th>
+                            <td>{{teacher.name}}</td>
+                            <td>{{teacher.surname}}</td>
+                            <td>{{teacher.patronymic}}</td>
+                            <td>{{teacher.gender}}</td>
+                            <td>{{teacher.birth_date}}</td>
+                            <td>{{teacher.phone_number}}</td>
+                            <td>{{teacher.address}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        <h2>Классы</h2>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Номер класса</th>
+                  <th>Буква класса</th>
+                  <th>Год принятия</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for class in class_list %}
+                        <tr>
+                            <th scope="row">{{class.id}}</th>
+                            <td>{{class.number}}</td>
+                            <td>{{class.letter}}</td>
+                            <td>{{class.year}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        <h2>Предметы</h2>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Название предмета</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for subject in subject_list %}
+                        <tr>
+                            <th scope="row">{{subject.id}}</th>
+                            <td>{{subject.title}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        <h2>Расписание</h2>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Код учителя</th>
+                  <th>Код предмета</th>
+                  <th>Код класса</th>
+                  <th>Время</th>
+                  <th>День</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for table in table_list %}
+                        <tr>
+                            <th scope="row">{{table.id}}</th>
+                            <td>{{table.code_teacher}}</td>
+                            <td>{{table.code_subject}}</td>
+                            <td>{{table.code_class}}</td>
+                            <td>{{table.time}}</td>
+                            <td>{{table.day}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+</body>
+</html>
