@@ -16,10 +16,10 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context.update(
             {
-                'teacher': teacher_list,
-                'class': class_list,
-                'subject': subject_list,
-                'table': table_list,
+                'teacher_list': teacher_list,
+                'class_list': class_list,
+                'subject_list': subject_list,
+                'table_list': table_list,
             }
         )
         return context

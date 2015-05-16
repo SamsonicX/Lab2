@@ -96,9 +96,9 @@
                     {% for table in table_list %}
                         <tr>
                             <th scope="row">{{table.id}}</th>
-                            <td>{{table.code_teacher}}</td>
-                            <td>{{table.code_subject}}</td>
-                            <td>{{table.code_class}}</td>
+                            <td>{{table.code_teacher.surname}}</td>
+                            <td>{{table.code_subject.title}}</td>
+                            <td>{{table.code_class.number}}{{table.code_class.letter}}</td>
                             <td>{{table.time}}</td>
                             <td>{{table.day}}</td>
                         </tr>
